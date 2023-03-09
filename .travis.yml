@@ -4,7 +4,7 @@ before_script:
   - sudo apt-get update
   - sudo apt-get install libavformat-dev libavfilter-dev libavdevice-dev ffmpeg
 rvm:
-  - 2.3.1
+  - 2.6.0
   - 3.2.1
 cache:
   - bundler

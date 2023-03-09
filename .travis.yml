@@ -9,4 +9,4 @@ rvm:
 cache:
   - bundler
 script:
-  - bundle exec rake
+  - bundle exec rspec

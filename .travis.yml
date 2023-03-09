@@ -1,5 +1,7 @@
-before_install: wget http://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz -O - | sudo tar -xJ --strip-components=1 -C /usr/local/bin/
 language: ruby
+before_script:
+  - sudo apt-get update
+  - sudo apt-get install libavformat-dev libavfilter-dev libavdevice-dev ffmpeg
 rvm:
   - 2.0.0
   - 2.2

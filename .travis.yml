@@ -1,5 +1,6 @@
 language: ruby
 before_script:
+  - gem install bundler
   - sudo apt-get update
   - sudo apt-get install libavformat-dev libavfilter-dev libavdevice-dev ffmpeg
 rvm:

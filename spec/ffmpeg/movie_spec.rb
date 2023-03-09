@@ -206,7 +206,7 @@ module FFMPEG
         end
       end
 
-      context "given an ios mobile video filmed with rotation=-180" do
+      context "given an android mobile video filmed with rotation=-180" do
         let(:movie) { Movie.new("#{fixture_path}/movies/horizontal_video_from_android-180.mp4") }
 
         it "should have correct rotation detected" do

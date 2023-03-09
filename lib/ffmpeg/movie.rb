@@ -205,9 +205,7 @@ module FFMPEG
     protected
 
     def rotation_from_tags(video_stream)
-      if video_stream.key?(:tags) && video_stream[:tags].key?(:rotate)
-        video_stream[:tags][:rotate].to_i
-      end
+      video_stream.dig(:tags, :rotate)&.to_i
     end
 
     def rotation_from_side_data(video_stream)

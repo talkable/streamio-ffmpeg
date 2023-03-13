@@ -1,13 +1,14 @@
-before_install: wget http://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz -O - | sudo tar -xJ --strip-components=1 -C /usr/local/bin/
 language: ruby
+before_script:
+  - gem install bundler
+  - sudo add-apt-repository -y ppa:jonathonf/ffmpeg-4
+  - sudo apt update
+  - sudo apt-get install -y ffmpeg
+  - ffmpeg -version
 rvm:
-  - 2.0.0
-  - 2.2
-  - 2.3.1
+  - 2.6.0
+  - 3.2.1
 cache:
   - bundler
-addons:
-  code_climate:
-    repo_token: 25cb5ce0278a4633050937ff504ef0eef45f5756b53db51b179ad42ed5d8c428
-after_success:
-  - bundle exec codeclimate-test-reporter
+script:
+  - bundle exec rspec

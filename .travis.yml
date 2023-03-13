@@ -2,6 +2,7 @@ language: ruby
 before_script:
   - gem install bundler
   - sudo apt update
+  - sudo apt upgrade
   - sudo apt install -y ffmpeg
   - ffmpeg -version
 rvm:

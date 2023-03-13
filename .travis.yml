@@ -1,9 +1,9 @@
 language: ruby
 before_script:
   - gem install bundler
+  - sudo add-apt-repository ppa:jonathonf/ffmpeg-4
   - sudo apt update
-  - sudo apt upgrade
-  - sudo apt install -y ffmpeg
+  - sudo apt-get install ffmpeg
   - ffmpeg -version
 rvm:
   - 2.6.0
